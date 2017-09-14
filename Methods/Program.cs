@@ -16,19 +16,47 @@ namespace Methods
         }
         static void Greet()
         {
-            Console.Write("\n Greetings User! How are you doing today? ");
-            string userInput = Console.ReadLine();
+            Console.Write("\n Greetings User! I have some math for you today. We'll keep it simple.  What is 2 + 2? ");
+            int greetingAnswer = int.Parse(Console.ReadLine());
+            if (greetingAnswer == 4)
+            {
+                Console.WriteLine("\n You are correct, well done!");
+            }
+            else
+            {
+                Console.WriteLine(" I'm sorry, that is incorrect.  Next question...");
+            }
         }
         static void Math()
         {
-            Console.Write($"\n Help me with some basic math.  What is 2 + 2 / 2? ");
-            Console.ReadLine();
+            Console.Write($"\n More basic math.  What is 2 + 2 / 2? ");
+            int mathAnswer = Convert.ToInt32(Console.ReadLine());
+            if (mathAnswer == 2)
+            {
+                Console.WriteLine("\n You are correct!");               
+            }
+            else
+            {
+                Console.WriteLine("\n I'm sorry, that is incorrect.  Next question...");
+            }
         }
         static void Ceeya()
         {
-            Console.Write("\n Oh, I'm sorry.  Were you waiting for a response? ");
-            Console.ReadLine();
-            Console.WriteLine("\n Well I hope you're not holding your breath!\n");
+            Console.Write("\n Ok, last one. How many licks does it take to get to the center of a Tootse Roll Tootse Pop? ");
+            int ceeyaAnswer = int.Parse(Console.ReadLine());
+            if (ceeyaAnswer == 3)
+            {
+                Console.WriteLine("\n You are correct, well done!");
+            }
+            else
+            {
+                Console.WriteLine(" Wow! You messed that up...CEEYA!!!\n");
+            }
+            
         }
+        //static void Answer()
+        //{
+
+        //}
     }
 }
