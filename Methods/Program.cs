@@ -10,7 +10,11 @@ namespace Methods
     {
         static void Main(string[] args)
         {
-            Console.Write("\n Greetings User! I have some math for you today. We'll keep it simple. What is 2 + 2? ");
+            Console.Write("\n Greetings User! I have some math for you today. We'll keep it simple. What is 2 + 2? (Spell out answer): ");
+            string greetingStringAnswer = Console.ReadLine().ToLower();
+            Greet(greetingStringAnswer);
+
+            Console.Write("\n Now, let's use numeric entries. What is 2 + 2? ");
             int greetingAnswer = int.Parse(Console.ReadLine());
             Greet(greetingAnswer);
 
@@ -25,6 +29,17 @@ namespace Methods
         static void Greet(int num)
         {
             if (num == 4)
+            {
+                Console.WriteLine("\n You are correct, well done!");
+            }
+            else
+            {
+                Console.WriteLine("\n I'm sorry, that is incorrect. Next question...");
+            }
+        }
+        static void Greet(string num)
+        {
+            if (num == "four")
             {
                 Console.WriteLine("\n You are correct, well done!");
             }
@@ -48,7 +63,7 @@ namespace Methods
         {
             if (ceeya == 3)
             {
-                Console.WriteLine("\n You are correct, well done!");
+                Console.WriteLine("\n You are correct, well done!\n");
             }
             else
             {
